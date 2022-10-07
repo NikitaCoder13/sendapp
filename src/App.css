@@ -1,0 +1,588 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style-type: none;
+}
+
+header {
+  position: relative;
+  padding: 20px 40px;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login input {
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(173, 173, 173);
+  outline: none;
+  font-size: 25px;
+  transition: all 0.3s ease-in;
+}
+
+.login {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form__wrapper {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login button {
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.login button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+.login input:valid,
+.login input:focus {
+  font-size: 18px;
+  border-bottom: 1px solid black;
+}
+
+.login div {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+main {
+  padding: 50px;
+}
+
+.search {
+  border-bottom: 1px solid rgb(216, 216, 216);
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  font-size: 15px;
+}
+
+input[type="text"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="text"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.searchPage button {
+  padding: 5px 15px;
+  font-weight: 600;
+}
+
+.searchPage button:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+.searchPage select {
+  outline: none;
+  width: 170px;
+  padding: 5px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.searchPage select:hover {
+  cursor: pointer;
+}
+
+.searchPage select:focus {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.searchForm div {
+  display: flex;
+}
+
+.cardsBlock {
+  padding: 50px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.postCard {
+  padding: 20px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 10px;
+}
+
+.cardHeader {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.postCard:hover {
+  cursor: pointer;
+  box-shadow: rgb(190, 190, 190) 0 0 10px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.cardHeader p {
+  color: gray;
+  margin-top: 10px;
+}
+
+.bottom-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.likes {
+  color: red;
+}
+
+.date {
+  color: blue;
+}
+
+.profile {
+  position: absolute;
+  right: 0;
+  bottom: -120px;
+  background-color: black;
+  color: white;
+  width: 150px;
+  display: none;
+}
+
+.profile li {
+  padding: 10px 15px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.activeProfile {
+  display: block;
+}
+
+.activeProfile li:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+header h5 {
+  user-select: none;
+  font-size: 15px;
+}
+
+header h5:hover {
+  cursor: pointer;
+}
+
+.activeProfile li:active {
+  background-color: white;
+  color: red;
+  cursor: pointer;
+}
+
+.activeProfileHeader {
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 10000px;
+}
+
+.wrapperForBin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bin {
+  height: 20px;
+  width: 20px;
+  background-image: url(./images/korzina.png);
+  /* <a href="https://www.flaticon.com/ru/free-icons/" title="мусор иконки">Мусор иконки от Catalin Fertu - Flaticon</a> */
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.remake {
+  height: 20px;
+  width: 20px;
+  background-image: url(./images/remake.png);
+  /* <a href="https://www.flaticon.com/ru/free-icons/" title="редактировать иконки">Редактировать иконки от Yogi Aprelliyanto - Flaticon</a> */
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wrapperSettings {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.redact {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.75) 0 0 0 10000px;
+  min-height: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+
+.redact input,
+.createPost input {
+  outline: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding: 5px;
+}
+
+.redact textarea,
+.createPost textarea {
+  resize: none;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+  min-height: 200px;
+}
+
+.redact button {
+  padding: 20px;
+  font-weight: 600;
+}
+
+.redact button:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+.redact input,
+.redact textarea,
+.createPost input,
+.createPost textarea {
+  font-size: 15px;
+}
+
+.redact input:focus,
+.createPost input:focus {
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.redact textarea::-webkit-scrollbar,
+.createPost textarea::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f9f9fd;
+}
+
+.redact textarea::-webkit-scrollbar-thumb,
+.createPost textarea::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #000000;
+}
+
+.redact textarea::-webkit-scrollbar-track,
+.createPost textarea::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #f9f9fd;
+}
+
+.redact textarea:focus,
+.createPost textarea:focus {
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.createPost {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.createPost button {
+  font-weight: 600;
+  padding: 10px 20px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.createPost button:hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}
+
+.postText {
+  padding: 50px 300px;
+}
+
+.postText p {
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.postInformation {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.comments {
+  margin-top: 50px;
+}
+
+.comment {
+  margin: 50px 0;
+}
+
+.comHeader {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.comment > p {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.comFooter .commLikes {
+  color: red;
+  font-size: 15px;
+}
+
+.commLikes:hover {
+  cursor: pointer;
+}
+
+.comments textarea {
+  outline: none;
+  resize: none;
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  font-size: 16px;
+  margin: 20px 0 20px 0;
+  height: 100px;
+}
+
+.comments textarea:focus {
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.createComment button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+}
+
+.createComment button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.createComment {
+  margin-bottom: 100px;
+}
+
+.comments textarea::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f9f9fd;
+}
+
+.comments textarea::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #000000;
+}
+
+.comments textarea::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #f9f9fd;
+}
+
+.createImage {
+  height: 20px;
+  width: 20px;
+  background-image: url(./images/remake.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.createPostImage {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 400;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.createPostImage:hover {
+  cursor: pointer;
+}
+
+.linkToCreate {
+  text-decoration: none;
+  color: black;
+}
+
+.linkToMyPosts {
+  text-decoration: none;
+  color: white;
+}
+
+.settingsCard {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.settings button {
+  width: 100px;
+  padding: 10px 0;
+}
+
+.saveBtn {
+  background-color: rgb(34, 34, 34);
+  color: rgb(238, 238, 238);
+}
+
+.saveBtn:hover {
+  cursor: pointer;
+  background-color: rgb(238, 238, 238);
+  color: rgb(34, 34, 34);
+}
+
+.delBtn {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 0.3s ease;
+}
+
+.delBtn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+  box-shadow: rgb(255, 135, 135) 0 0 5px;
+}
+
+.delBtn:active {
+  box-shadow: none;
+}
+
+.settingsCard input {
+  background-color: white;
+  padding: 10px;
+  outline: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.settingsCard input:focus {
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.settingsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  margin-top: 10px;
+}
+.notComm {
+  text-align: center;
+  margin-top: 50px;
+  color: gray;
+  font-weight: 400;
+}
+
+.pagination li {
+  display: inline-block;
+  padding: 10px;
+  user-select: none;
+}
+
+.pagination {
+  margin: 20px;
+}
+
+.pagination li:hover {
+  cursor: pointer;
+}
+
+.pagination li:active {
+  color: red;
+}
+
+.focused {
+  background-color: black;
+  color: white;
+}
+
+.btnGroup {
+  margin-left: 20px;
+}
+
+.btnGroup button {
+  background-color: white;
+}
+
+.btnGroup button:hover {
+  background-color: #f0f0f0;
+}
